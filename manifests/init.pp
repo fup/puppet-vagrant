@@ -15,10 +15,9 @@
 # Requires:
 #     Class[sudoers]
 
-sudoers::entry { 'vagrant':
-  ensure   => 'present',
-  isgroup  => 'false',
-  nopasswd => 'true',
-  noexec   => 'false',
-  commands => ['ALL']
+class vagrant {
+  sudoers::entry { 'vagrant':
+    ensure   => 'present',
+    nopasswd => 'true',
+  }
 }
