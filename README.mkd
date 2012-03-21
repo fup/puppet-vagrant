@@ -1,0 +1,18 @@
+#Class: vagrant
+
+##Description
+This module ensures that vagrant work with puppet, even after a provision that may change sudoers.
+
+##Parameters
+None
+
+##Actions:
++ edits sudoers to allow vagrant user the right permissions
+
+##Requires
+Nothing
+
+#Sample Usage
+```
+include 'vagrant'
+```
